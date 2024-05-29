@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/5b10d90f-9853-4d85-877d-ce87d0995f62/console_1.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoCourseImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoCourseStudentImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoStudentImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoTeacherImpl.java" dialect="GenericSQL" />
+  </component>
+</project>

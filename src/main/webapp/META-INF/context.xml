@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/webTest_war">
+  <Resource auth="Container"
+            driverClassName="org.postgresql.Driver"
+            name="jdbc/databasecourse"
+            password="evelina2002"
+            type="javax.sql.DataSource"
+            url="jdbc:postgresql://localhost:5432/databasecourse"
+            username="userpg"/>
+</Context>
+
