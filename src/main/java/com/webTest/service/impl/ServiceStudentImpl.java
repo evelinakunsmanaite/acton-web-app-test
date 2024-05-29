@@ -49,7 +49,7 @@ public class ServiceStudentImpl implements Service<StudentDto> {
 
     @Override
     public boolean delete(int id) {
-        return serviceCourseStudent.deleteStudentConnection(id) && daoStudent.delete(id) > 0;
+        return daoStudent.delete(id) > 0;
     }
 
 }

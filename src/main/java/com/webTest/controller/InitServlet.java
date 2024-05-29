@@ -42,7 +42,7 @@ public abstract class InitServlet extends HttpServlet {
             DaoCourseStudent daoCourseStudent = new DaoCourseStudentImpl(connection);
 
             serviceTeacher = new ServiceTeacherImpl(daoTeacher, TeacherMapper.INSTANCE);
-            serviceCourse = new ServiceCourseImpl(daoCourse, CourseMapper.INSTANCE, serviceCourseStudent);
+            serviceCourse = new ServiceCourseImpl(daoCourse, CourseMapper.INSTANCE);
             serviceStudent = new ServiceStudentImpl(daoStudent, StudentMapper.INSTANCE, serviceCourseStudent);
             serviceCourseStudent = new ServiceCourseStudentImpl(daoCourseStudent);
 

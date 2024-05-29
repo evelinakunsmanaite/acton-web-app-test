@@ -4,7 +4,6 @@ import com.webTest.dao.Dao;
 import com.webTest.dto.CourseDto;
 import com.webTest.model.Course;
 import com.webTest.service.Service;
-import com.webTest.service.ServiceCourseStudent;
 import com.webTest.util.CourseMapper;
 
 import java.util.List;
@@ -13,13 +12,11 @@ import java.util.stream.Collectors;
 public class ServiceCourseImpl implements Service<CourseDto> {
     Dao<Course> daoCourse;
     private final CourseMapper courseMapper;
-    private final ServiceCourseStudent serviceCourseStudent;
 
 
-    public ServiceCourseImpl(Dao<Course> daoCourse, CourseMapper courseMapper, ServiceCourseStudent serviceCourseStudent){
+    public ServiceCourseImpl(Dao<Course> daoCourse, CourseMapper courseMapper){
         this.daoCourse = daoCourse;
         this.courseMapper = courseMapper;
-        this.serviceCourseStudent = serviceCourseStudent;
 
     }
 
@@ -45,7 +42,7 @@ public class ServiceCourseImpl implements Service<CourseDto> {
 
     @Override
     public boolean delete(int id) {
-        return serviceCourseStudent.deleteCourseConnection(id) && daoCourse.delete(id) > 0;
+        return daoCourse.delete(id) > 0;
     }
 
 }

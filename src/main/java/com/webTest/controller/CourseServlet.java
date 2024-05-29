@@ -86,7 +86,9 @@ public class CourseServlet extends InitServlet {
 
         try {
             int id = Integer.parseInt(request.getParameter("id"));
-            boolean isDeleted = serviceCourse.delete(id);
+            boolean isDeleted;
+                    if (serviceCourseStudent.deleteCourseConnection(id)) isDeleted = serviceCourse.delete(id);
+                    else isDeleted = false;
             response.setContentType(PATH);
             response.getWriter().write(SUCCESS_PATH + isDeleted + "}");
         } catch (IOException | NumberFormatException ex) {

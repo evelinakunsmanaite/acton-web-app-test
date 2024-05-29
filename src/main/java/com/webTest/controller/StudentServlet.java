@@ -80,7 +80,9 @@ public class StudentServlet extends InitServlet {
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
         try {
             int id = Integer.parseInt(request.getParameter("id"));
-            boolean isDeleted = serviceStudent.delete(id);
+            boolean isDeleted;
+            if (serviceCourseStudent.deleteStudentConnection(id)) isDeleted = serviceStudent.delete(id);
+            else isDeleted = false;
             response.setContentType(PATH);
             response.getWriter().write(SUCCESS_PATH + isDeleted + "}");
         } catch (IOException | NumberFormatException ex){
