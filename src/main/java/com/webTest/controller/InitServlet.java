@@ -8,7 +8,6 @@ import com.webTest.model.*;
 import com.webTest.service.Service;
 import com.webTest.service.ServiceCourseStudent;
 import com.webTest.service.impl.*;
-import com.webTest.util.*;
 import com.webTest.dao.impl.*;
 import javax.servlet.http.HttpServlet;
 import java.sql.Connection;
@@ -31,9 +30,9 @@ public abstract class InitServlet extends HttpServlet {
         Dao<Student> daoStudent = new DaoStudentImpl(connection);
         DaoCourseStudent daoCourseStudent = new DaoCourseStudentImpl(connection);
 
-        serviceTeacher = new ServiceTeacherImpl(daoTeacher, TeacherMapper.INSTANCE);
-        serviceCourse = new ServiceCourseImpl(daoCourse, CourseMapper.INSTANCE);
-        serviceStudent = new ServiceStudentImpl(daoStudent, StudentMapper.INSTANCE);
+        serviceTeacher = new ServiceTeacherImpl(daoTeacher);
+        serviceCourse = new ServiceCourseImpl(daoCourse);
+        serviceStudent = new ServiceStudentImpl(daoStudent);
         serviceCourseStudent = new ServiceCourseStudentImpl(daoCourseStudent);
 
     }
