@@ -60,10 +60,6 @@ h
 .src/main/java/com/webTest/service/Service.java,c\6\c63d151499a4ef268a419d1fe151d228645c76bd
 b
 2src/main/java/com/webTest/model/CourseStudent.java,c\1\c1e07997f07eb5094bfb926ea375abf561cb8d7a
-p
-@src/main/java/com/webTest/service/impl/ServiceCourseStudent.java,8\0\8058d5e0d2287bb1d7fc2a46e8d90c47862f897b
-h
-8src/main/java/com/webTest/dao/impl/DaoCourseStudent.java,5\e\5e8b26960432e150812023e9cb0918fc5119f53f
 t
 Dsrc/main/java/com/webTest/service/impl/ServiceCourseStudentImpl.java,d\2\d2bbc09ce01d484c83f363f315c5eab1d0a47012
 l
@@ -72,7 +68,7 @@ k
 ;src/main/java/com/webTest/service/ServiceCourseStudent.java,a\f\afd483768ef041ca2b9f5790709789cb48c13da6
 c
 3src/main/java/com/webTest/dao/DaoCourseStudent.java,2\2\22e971badd2cc5656f3a719d5c8fbb78f9195534
-i
-9src/test/java/com/webTest/controller/InitServletTest.java,7\c\7cf6839de59d9d1cffd576921fadfcde1f6a0cbb
 f
 6src/main/java/com/webTest/init/DatabaseConnection.java,e\d\edaca9e30aae549cffec4beac0c414cf9c4acbc6
+j
+:src/test/java/com/webTest/init/DatabaseConnectionTest.java,f\8\f81dd746c642331fe62da91457039d8c1b9801d7
