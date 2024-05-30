@@ -72,3 +72,7 @@ k
 ;src/main/java/com/webTest/service/ServiceCourseStudent.java,a\f\afd483768ef041ca2b9f5790709789cb48c13da6
 c
 3src/main/java/com/webTest/dao/DaoCourseStudent.java,2\2\22e971badd2cc5656f3a719d5c8fbb78f9195534
+i
+9src/test/java/com/webTest/controller/InitServletTest.java,7\c\7cf6839de59d9d1cffd576921fadfcde1f6a0cbb
+f
+6src/main/java/com/webTest/init/DatabaseConnection.java,e\d\edaca9e30aae549cffec4beac0c414cf9c4acbc6
