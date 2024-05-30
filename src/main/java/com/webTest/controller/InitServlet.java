@@ -43,7 +43,7 @@ public abstract class InitServlet extends HttpServlet {
 
             serviceTeacher = new ServiceTeacherImpl(daoTeacher, TeacherMapper.INSTANCE);
             serviceCourse = new ServiceCourseImpl(daoCourse, CourseMapper.INSTANCE);
-            serviceStudent = new ServiceStudentImpl(daoStudent, StudentMapper.INSTANCE, serviceCourseStudent);
+            serviceStudent = new ServiceStudentImpl(daoStudent, StudentMapper.INSTANCE);
             serviceCourseStudent = new ServiceCourseStudentImpl(daoCourseStudent);
 
         } catch (SQLException ex) {

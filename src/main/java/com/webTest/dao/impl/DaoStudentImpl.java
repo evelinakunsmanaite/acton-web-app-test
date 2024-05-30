@@ -41,17 +41,27 @@ public class DaoStudentImpl implements Dao<Student> {
 
     @Override
     public List<Student> read() {
-        String query = "SELECT s.id, s.student_name, s.student_age FROM students";
+        String query = "SELECT s.id, s.student_name, s.student_age, c.course_name" +
+                "FROM students s" +
+                "JOIN student_course sc ON s.id = sc.student_id" +
+                "JOIN courses c ON sc.course_id = c.id";
         List<Student> students = new ArrayList<>();
 
         try (Statement st = connection.createStatement();
              ResultSet rs = st.executeQuery(query)) {
 
             while (rs.next()) {
-                Student student = new Student();
-                student.setId(rs.getInt("id"));
-                student.setName(rs.getString("student_name"));
-                student.setAge(rs.getInt("student_age"));
+                int studentId = rs.getInt("id");
+                String studentName = rs.getString("student_name");
+                int studentAge = rs.getInt("student_age");
+                String courseName = rs.getString("course_name");
+
+                Student student  = students.stream().filter(s -> s.getId() == studentId).findFirst().orElse(null);
+
+                if (student == null) {
+                    student = new Student(studentId, studentName, studentAge, new ArrayList<>());
+                }
+                student.getCoursesList().add(courseName);
                 students.add(student);
             }
 

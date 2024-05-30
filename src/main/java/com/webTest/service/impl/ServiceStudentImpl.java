@@ -14,13 +14,11 @@ import java.util.stream.Collectors;
 public class ServiceStudentImpl implements Service<StudentDto> {
     private final Dao<Student> daoStudent;
     private final StudentMapper studentMapper;
-    private final ServiceCourseStudent serviceCourseStudent;
 
 
-    public ServiceStudentImpl(Dao<Student> daoStudent, StudentMapper studentMapper, ServiceCourseStudent serviceCourseStudent){
+    public ServiceStudentImpl(Dao<Student> daoStudent, StudentMapper studentMapper){
         this.daoStudent = daoStudent;
         this.studentMapper = studentMapper;
-        this.serviceCourseStudent = serviceCourseStudent;
 
     }
 
@@ -33,9 +31,6 @@ public class ServiceStudentImpl implements Service<StudentDto> {
     @Override
     public List<StudentDto> read() {
         List<Student> students = daoStudent.read();
-        for (Student student : students) {
-            student.setCoursesList(serviceCourseStudent.readCourseByStudentId(student.getId()));
-        }
         return students.stream()
                 .map(studentMapper::studentToStudentDto)
                 .collect(Collectors.toList());
