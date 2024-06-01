@@ -78,6 +78,8 @@ public class StudentServlet extends InitServlet {
 
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) {
+        configureResponse(response);
+
         try {
             int id = Integer.parseInt(request.getParameter("id"));
             boolean isDeleted;

@@ -6,5 +6,9 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoCourseStudentImpl.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoStudentImpl.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/webTest/dao/impl/DaoTeacherImpl.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/webTest/dao/DaoCourseImplTest.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/webTest/dao/DaoCourseStudentImplTest.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/webTest/dao/DaoStudentImplTest.java" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/src/test/java/com/webTest/dao/DaoTeacherImplTest.java" dialect="GenericSQL" />
   </component>
 </project>

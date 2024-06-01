@@ -5,6 +5,7 @@ import com.webTest.model.CourseStudent;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Logger;
 
@@ -37,16 +38,15 @@ public class DaoCourseStudentImpl implements DaoCourseStudent {
 
     @Override
     public List<String> readCourseByStudentId(int idStudent) {
-        String sql = "SELECT c.course_name" +
-                "FROM courses c" +
-                "JOIN student_course sc c.id = sc.course_id" +
+        String sql = "SELECT c.course_name " +
+                "FROM courses c " +
+                "JOIN student_course sc ON c.id = sc.course_id " +
                 "WHERE sc.student_id = ?";
         List<String> listCoursesNames = new ArrayList<>();
 
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
-            ResultSet resultSet = preparedStatement.executeQuery();
             preparedStatement.setInt(1, idStudent);
-
+            ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()){
                 listCoursesNames.add(resultSet.getString("course_name"));
             }
@@ -54,7 +54,7 @@ public class DaoCourseStudentImpl implements DaoCourseStudent {
             return listCoursesNames;
         } catch (SQLException ex) {
             logger.severe("Course by student id reading exception: " + ex.getMessage());
-            return null;
+            return Collections.emptyList();
         }
     }
 

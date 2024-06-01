@@ -41,9 +41,9 @@ public class DaoStudentImpl implements Dao<Student> {
 
     @Override
     public List<Student> read() {
-        String query = "SELECT s.id, s.student_name, s.student_age, c.course_name" +
-                "FROM students s" +
-                "JOIN student_course sc ON s.id = sc.student_id" +
+        String query = "SELECT s.id, s.student_name, s.student_age, c.course_name " +
+                "FROM students s " +
+                "JOIN student_course sc ON s.id = sc.student_id " +
                 "JOIN courses c ON sc.course_id = c.id";
         List<Student> students = new ArrayList<>();
 
@@ -60,9 +60,11 @@ public class DaoStudentImpl implements Dao<Student> {
 
                 if (student == null) {
                     student = new Student(studentId, studentName, studentAge, new ArrayList<>());
+                    students.add(student);
                 }
-                student.getCoursesList().add(courseName);
-                students.add(student);
+                    student.getCoursesList().add(courseName);
+
+
             }
 
             return students;

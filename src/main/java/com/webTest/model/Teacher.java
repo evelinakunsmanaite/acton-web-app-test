@@ -19,4 +19,9 @@ public class Teacher {
         this.id = id;
     }
 
+    public Teacher(String name, int age, String phoneNumber) {
+        this.name = name;
+        this.age = age;
+        this.phoneNumber = phoneNumber;
+    }
 }

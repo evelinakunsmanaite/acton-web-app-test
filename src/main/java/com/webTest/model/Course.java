@@ -20,4 +20,20 @@ public class Course {
         this.id = id;
     }
 
+
+
+    public Course(String courseName, String teacherName, String teacherPhoneNumber) {
+        this.courseName = courseName;
+        this.teacherName = teacherName;
+        this.teacherPhoneNumber = teacherPhoneNumber;
+
+    }
+
+    public Course(int id, String courseName, String teacherName, String teacherPhoneNumber) {
+        this.id = id;
+        this.courseName = courseName;
+        this.teacherName = teacherName;
+        this.teacherPhoneNumber = teacherPhoneNumber;
+
+    }
 }
